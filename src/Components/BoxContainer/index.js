@@ -2,12 +2,21 @@ import { useState } from "react";
 import Box from "../Box";
 import boxContainerStyle from "./boxContainerStyle.module.css";
 
+function getBoxCount() {
+    const boxesCount = [];
+
+    for (let i = 0; i < 26; i++) {
+        boxesCount.push(i);
+    }
+
+    return boxesCount;
+}
+
 function BoxContainer() {
-
-    const [boxes, setBoxes] = useState([1, 2, 3]);
-
     return (
-        boxes.map(item => <Box key={`box-id-${item}`}/>)
+        <div className={boxContainerStyle.container}>
+            {getBoxCount().map(item => <Box key={`box-id-${item}`} />)}
+        </div>
     )
 }
 

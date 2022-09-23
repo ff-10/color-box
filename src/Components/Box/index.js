@@ -8,10 +8,9 @@ function getRandomColor() {
 function Box() {
 
     const [color, setColor] = useState(getRandomColor());
-
-
+    
     return (
-        <div className={boxStyle.box} style={{backgroundColor: color}} onClick={() => setColor(getRandomColor())}></div>
+        <div className={boxStyle.box} style={{ backgroundColor: color }} onClick={() => setColor(getRandomColor())}></div>
     )
 }
 
