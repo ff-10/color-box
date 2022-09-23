@@ -1,9 +1,8 @@
+import BoxContainer from "./Components/BoxContainer";
 
-function App(){
-  return(
-    <div>
-      Color Box App.
-    </div>
+function App() {
+  return (
+    <BoxContainer />
   )
 }
 
